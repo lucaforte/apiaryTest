@@ -1,13 +1,29 @@
 FORMAT: 1A
 HOST: http://polls.apiblueprint.org/
 
-# myFirstAPI
+# myFirstAPI Documentation
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+This doc provide all the specs about myFirstAPI project
 
-## Questions Collection [/questions]
+# Groups Questions
+
+Test Groups hashtag
+
+## Questions Collection [/questions/{question_id}]
+
+Test description in the collection
 
 ### List All Questions [GET]
+
++ Response 404 (text/html)
+
+        <html>
+            <head>Test my Api</head>
+            <body>
+                <h1>This is a Simple GET response</h1>
+                <p>Hello World!</p>
+            </body>
+        </html>
 
 + Response 200 (application/json)
 
@@ -78,3 +94,7 @@ form of choices.
                     }
                 ]
             }
+            
++ Parameters
+    + question_id: '1' (number,optional) - ID of a question
+        + Default: '1'
