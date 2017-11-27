@@ -15,6 +15,17 @@ Test description in the collection
 
 ### List All Questions [GET]
 
++ Parameters
+
+    + question_id: '1' (optional, string)ior
+        + Members
+            + '1'
+            + '2'
+            
++ Request 1
+    + Parameters
+        + question_id: 1
+
 + Response 200 (text/html)
 
         <html>
@@ -24,6 +35,10 @@ Test description in the collection
                 <p>Hello World!</p>
             </body>
         </html>
+        
++ Request 2
+    + Parameters
+        + question_id: 2
 
 + Response 201 (application/json)
 
@@ -48,10 +63,6 @@ Test description in the collection
                 ]
             }
         ]
-        
-+ Parameters
-    + question_id: 1 (number,optional) - ID of a question
-        + Default: 1
 
 ### Create a New Question [POST]
 
@@ -98,10 +109,6 @@ form of choices.
                     }
                 ]
             }
-            
-+ Parameters
-    + question_id: 2 (number,optional) - ID of a question
-        + Default: 2
         
 ### Delete [DELETE]
 
